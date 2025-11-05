@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router';
 
-const App =() => {
+const SignUp =() => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [rememberMe, setRememberMe] = useState(false);
 
   const handleSubmit = () => {
   };
@@ -12,11 +11,12 @@ const App =() => {
 
   return (
     <div className="min-h-screen bg-[#9E1C60] flex items-center justify-center p-4">
+
       {/* Login Form Card */}
       <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md">
         <div className="text-center mb-8">
           <p className="text-gray-400 text-sm mb-2">Please enter your details</p>
-          <h1 className="text-4xl font-bold text-gray-900">Welcome back</h1>
+          <h1 className="text-4xl font-bold text-gray-900">Sign In</h1>
         </div>
 
         <div className="space-y-4">
@@ -42,24 +42,26 @@ const App =() => {
             />
           </div>
 
+
           {/* Sign Up Button */}
           <button
             onClick={handleSubmit}
             className="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 rounded-lg transition-colors"
           >
-            Sign In
+            Sign up
           </button>
         </div>
 
+
         {/* Sign Up Link */}
         <p className="text-center text-sm text-gray-500 mt-6">
-          Don't have an account?{' '}
-          <Link to='/signup'  className="text-blue-500 hover:underline font-medium">
-            Sign up
+          Already have an account?{' '}
+          <Link to="/" className="text-blue-500 hover:underline font-medium">
+            Sign in
           </Link>
         </p>
       </div>
     </div>
   );
 }
-export default App
+export default SignUp
